@@ -1,7 +1,20 @@
 class Operaciones:
     def __init__(self):
-        self.num1 = int(input("Ingrese un numero entero: "))
-        self.num2 = int(input("Ingrese otro numero entero: "))
+        while True:
+            try:
+                self.num1 = int(input("Ingrese un numero entero: "))
+                
+                break
+            except ValueError:
+                print("Error, este numero no es un entero")
+                
+        while True:
+            try:
+                self.num2 = int(input("Ingrese otro numero entero: "))
+                break
+            except ValueError:
+                print("Error, este numero no es un entero")
+        
         
     def operaciones(self):
         print(f"Suma: {self.num1 + self.num2}")
